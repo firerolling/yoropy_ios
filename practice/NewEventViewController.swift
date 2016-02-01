@@ -31,18 +31,23 @@ class NewEventViewController: UIViewController, LiquidFloatingActionButtonDataSo
     
     
     //追加のメンバ変数
-   // var eventTitle :String = ""
+    var eventTitle :String = ""
     var eventPhoto :UIImage! = nil
     var eventPlace :[String] = []
     var eventDate  :[String] = []
     
     //保存用メンバ変数
     
-    //var saveEventTitle :String!
+    var saveEventTitle :String!
     var saveEventPhoto :UIImage? = nil
     var uploadEventPhoto :PFFile!
     var saveEventPlace :[String] = []
     var saveEventDate :[String] = []
+    
+    
+    
+
+    
     
     
     var cells: [LiquidFloatingCell] = []

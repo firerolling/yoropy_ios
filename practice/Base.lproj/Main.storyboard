@@ -586,6 +586,20 @@
                                     <segue destination="XNh-xp-aSm" kind="show" id="yTU-jM-l0j"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VI-ra-cfm">
+                                <rect key="frame" x="0.0" y="250" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qAn-XH-PKS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <state key="normal" title="DATE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cAL-Pe-TU1" kind="show" id="DCi-f2-Ski"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACC-Qu-gMq">
                                 <rect key="frame" x="113" y="458" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
