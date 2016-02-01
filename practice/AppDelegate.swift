@@ -1,7 +1,3 @@
-
-
-
-
 //
 //  AppDelegate.swift
 //  practice
@@ -17,6 +13,9 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    // この変数を他のクラスからアクセスする
+    //　データ受け渡しグローバルフィールド。空要素（nil）を追加する
+//    var globalStrings01:String? = nil
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

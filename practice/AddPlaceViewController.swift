@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDelegate,UITableViewDataSource {
     
     
     
-    
+    var savePlaceTitle :String!
     @IBOutlet weak var placeTableView: UITableView!
     
     override func viewDidLoad() {
@@ -25,8 +26,20 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
         let nib:UINib = UINib(nibName: "PlaceCell", bundle: nil)
         self.placeTableView.registerNib(nib, forCellReuseIdentifier: "PlaceCell")
         
+    
+        
+        
     }
     
+       
+    @IBAction func alertBtn(sender: UIButton) {
+        let alertController = UIAlertController(title: "Hello!", message: "This is Alert sample.", preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
     
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,13 +77,15 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
     
-
     
     @IBAction func popover(sender: AnyObject) {
         self.performSegueWithIdentifier("showView", sender: self)
-       
-        
     }
+    
+    @IBAction func backToList(sender: AnyObject) {
+        self.performSegueWithIdentifier("placetodetail", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showView"
         {
@@ -84,6 +99,28 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
                 controller?.delegate = self
             }
         }
+        else if segue.identifier == "placetodetail"
+        {
+            let newEventViewController = segue.destinationViewController as! NewEventViewController
+            newEventViewController.placeName = titleList[0]
+//            let savingObjects = PFObject(className: "Event")
+//            
+//            savingObjects["placeTitle"] = titleList[0]
+//            
+//            savingObjects.saveInBackgroundWithBlock{ (success: Bool, error: NSError?) -> Void in
+//                
+//                if success {
+//                    let alert = SCLAlertView()
+//                    alert.showSuccess("Event added!", subTitle: "Your new event has been added to timeline!")
+//                    self.dismissViewControllerAnimated(true, completion: nil)
+//                }else{
+//                    let alert = SCLAlertView()
+//                    alert.showError("Oops!", subTitle: "something went wrong!")
+//                }
+//                
+//            }
+
+        }
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) ->UIModalPresentationStyle {
@@ -91,18 +128,4 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
     }
 
     
-   
-  
-        
-    }
-    
-    
-    
-
-    
-
-    
-    
-    
-
-
+}

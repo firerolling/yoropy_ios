@@ -17,9 +17,11 @@ class NewEventViewController: UIViewController, LiquidFloatingActionButtonDataSo
  //   @IBOutlet weak var titleField: UITextField!
    
     @IBOutlet weak var imageView: UIImageView!
-
     
-
+    var placeName :String! //ポップアップのplacetitleをこっちのコントローラに受けるための変数定義
+    //@IBOutlet weak var placetitle: UILabel!
+    
+    @IBOutlet weak var test: UILabel!
     
     //追加のメンバ変数
     var eventTitle :String = ""
@@ -36,18 +38,19 @@ class NewEventViewController: UIViewController, LiquidFloatingActionButtonDataSo
     var saveEventDate :String!
     
     
-    
-    
-    
     var cells: [LiquidFloatingCell] = []
     var floatingActionButton: LiquidFloatingActionButton!
     
     @IBOutlet weak var closeButton: UIButton!
     
     override func viewDidLoad() {
-        
+         
 //        titleField.delegate = self
-    
+        
+//        //placeTitleがアラートで表示されるかテスト
+//        let alert = UIAlertController(title: "Alert", message: placeTitle, preferredStyle: UIAlertControllerStyle.Alert)
+//        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+//        self.presentViewController(alert, animated: true, completion: nil)
         
         self.view.bringSubviewToFront(imageView)
         

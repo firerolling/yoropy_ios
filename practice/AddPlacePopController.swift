@@ -9,7 +9,7 @@
 
 import UIKit
 import SafariServices
-
+import Parse
 
 
 var titleList = [String]()
@@ -21,7 +21,7 @@ class AddPlacePopViewController: UIViewController, UITextFieldDelegate {
     let detailField = UITextField()
     private var urlString:String = "http://tabelog.com/"
     private var urlGurunavi:String = "http://www.gnavi.co.jp/"
-    
+    @IBOutlet weak var globalStrings01: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +65,6 @@ class AddPlacePopViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(detailField)
         
         
-    
-        
         titleField.delegate = self
         detailField.delegate = self
 
@@ -80,7 +78,6 @@ class AddPlacePopViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func save(sender: UIButton) {
         
-        
         titleList.append(titleField.text!)
         titleField.text = ""
         NSUserDefaults.standardUserDefaults().setObject(titleList, forKey: "title")
@@ -88,10 +85,10 @@ class AddPlacePopViewController: UIViewController, UITextFieldDelegate {
         detailList.append(detailField.text!)
         detailField.text = ""
         NSUserDefaults.standardUserDefaults().setObject(detailList, forKey: "detail")
+       
     
-    
-        
     }
+      
     
     @IBAction func openGoogle(sender: UIButton) {
         let svc = SFSafariViewController(URL: NSURL(string: self.urlString)!)
@@ -104,10 +101,6 @@ class AddPlacePopViewController: UIViewController, UITextFieldDelegate {
         let svc = SFSafariViewController(URL: NSURL(string: self.urlGurunavi)!)
         self.presentViewController(svc, animated: true, completion: nil)
     }
-    
-    
-    
-    
     
     
     
