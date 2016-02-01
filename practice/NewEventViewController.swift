@@ -14,7 +14,7 @@ class NewEventViewController: UIViewController, LiquidFloatingActionButtonDataSo
     
    
     
- //   @IBOutlet weak var titleField: UITextField!　木下アホや あはんあはん
+ //   @IBOutlet weak var titleField: UITextField!
    
     @IBOutlet weak var imageView: UIImageView!
 
