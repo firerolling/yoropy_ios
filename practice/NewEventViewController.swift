@@ -19,7 +19,7 @@ class NewEventViewController: UIViewController, LiquidFloatingActionButtonDataSo
    
     @IBOutlet weak var tableView: UITableView!
     
- //   @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var titleField: UITextField!
    
     @IBOutlet weak var imageView: UIImageView!
     

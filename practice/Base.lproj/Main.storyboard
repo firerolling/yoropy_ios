@@ -586,7 +586,7 @@
                                     <segue destination="XNh-xp-aSm" kind="show" id="yTU-jM-l0j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VI-ra-cfm">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VI-ra-cfm">
                                 <rect key="frame" x="0.0" y="250" width="600" height="50"/>
                                 <color key="backgroundColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -629,11 +629,12 @@
                         <outlet property="closeButton" destination="SwT-jQ-Hrb" id="MSc-1e-Jd5"/>
                         <outlet property="imageView" destination="JUU-ED-aI8" id="onU-jG-2vp"/>
                         <outlet property="test" destination="ACC-Qu-gMq" id="Qbn-lh-LpL"/>
+                        <outlet property="titleField" destination="mLH-zt-osP" id="kTK-Mh-Q5m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teL-8X-YPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1067" y="1065"/>
+            <point key="canvasLocation" x="1047" y="1045"/>
         </scene>
         <!--Add Date View Controller-->
         <scene sceneID="pKb-gg-wC2">
@@ -1019,7 +1020,7 @@
         <image name="tabelog" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1sG-Dv-Dpp"/>
-        <segue reference="6m8-2U-Anj"/>
+        <segue reference="yTU-jM-l0j"/>
+        <segue reference="YPI-KW-WZi"/>
     </inferredMetricsTieBreakers>
 </document>
