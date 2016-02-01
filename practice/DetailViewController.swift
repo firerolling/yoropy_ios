@@ -34,6 +34,7 @@ class DetailViewController: UIViewController {
             if error == nil {
                 let image = UIImage(data: imageData!)
                 self.imageLabel.image = image
+                self.imageLabel.contentMode = UIViewContentMode.Redraw
             }
             
         }
