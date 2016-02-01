@@ -574,7 +574,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-Dt-Tkh">
                                 <rect key="frame" x="0.0" y="200" width="600" height="50"/>
-                                <color key="backgroundColor" red="0.25005361440000001" green="0.30566063519999997" blue="0.58369332549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="lJj-sd-Zjg"/>
                                 </constraints>
@@ -588,7 +588,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VI-ra-cfm">
                                 <rect key="frame" x="0.0" y="250" width="600" height="50"/>
-                                <color key="backgroundColor" red="0.52106726169999995" green="0.24050712590000001" blue="0.68248951440000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qAn-XH-PKS"/>
                                 </constraints>
@@ -596,6 +596,9 @@
                                 <state key="normal" title="DATE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cAL-Pe-TU1" kind="show" id="DCi-f2-Ski"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACC-Qu-gMq">
                                 <rect key="frame" x="113" y="458" width="42" height="21"/>
@@ -637,6 +640,180 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teL-8X-YPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002" y="1097"/>
+        </scene>
+        <!--Add Date View Controller-->
+        <scene sceneID="pKb-gg-wC2">
+            <objects>
+                <viewController id="cAL-Pe-TU1" customClass="AddDateViewController" customModule="practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ewy-to-gPQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pwx-8B-bIQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Ul-kw-KU2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE &amp; TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXG-d0-GQw">
+                                <rect key="frame" x="0.0" y="20" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vfu-Gz-edL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V4Q-xF-IF6">
+                                <rect key="frame" x="20" y="60" width="560" height="480"/>
+                                <color key="backgroundColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FpC-pv-59c">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FpC-pv-59c" id="gyw-tE-noN">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cAL-Pe-TU1" id="A51-oZ-1c7"/>
+                                    <outlet property="delegate" destination="cAL-Pe-TU1" id="bmy-ew-Epb"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8d-iE-m3b">
+                                <rect key="frame" x="540" y="540" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4TT-oF-fMJ"/>
+                                    <constraint firstAttribute="height" constant="60" id="ymB-Hj-2Gj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="＋">
+                                    <color key="titleColor" red="0.25005361440000001" green="0.30566063519999997" blue="0.58369332549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="popover:" destination="PdS-sI-6eJ" eventType="touchUpInside" id="4fv-Qo-VdN"/>
+                                    <action selector="popover:" destination="cAL-Pe-TU1" eventType="touchUpInside" id="gS3-j2-P7Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBm-wq-RmY">
+                                <rect key="frame" x="0.0" y="540" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bDr-wB-lKf"/>
+                                    <constraint firstAttribute="width" constant="60" id="p4K-NQ-j5u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" red="0.25005361440000001" green="0.30566063519999997" blue="0.58369332549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="VAS-NI-xlz" kind="show" id="YPI-KW-WZi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V4Q-xF-IF6" firstAttribute="leading" secondItem="7Ul-kw-KU2" secondAttribute="leadingMargin" id="GzX-Kp-dzV"/>
+                            <constraint firstItem="Pwx-8B-bIQ" firstAttribute="top" secondItem="mBm-wq-RmY" secondAttribute="bottom" id="QVL-ak-oY5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZXG-d0-GQw" secondAttribute="trailing" constant="-20" id="QnP-vU-cQE"/>
+                            <constraint firstItem="V4Q-xF-IF6" firstAttribute="trailing" secondItem="7Ul-kw-KU2" secondAttribute="trailingMargin" id="Vt7-oh-KiP"/>
+                            <constraint firstItem="Pwx-8B-bIQ" firstAttribute="top" secondItem="m8d-iE-m3b" secondAttribute="bottom" id="Xro-o8-7F0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m8d-iE-m3b" secondAttribute="trailing" constant="-20" id="Zsi-fa-Msa"/>
+                            <constraint firstItem="mBm-wq-RmY" firstAttribute="top" secondItem="V4Q-xF-IF6" secondAttribute="bottom" id="doC-YS-TeC"/>
+                            <constraint firstItem="ZXG-d0-GQw" firstAttribute="top" secondItem="Ewy-to-gPQ" secondAttribute="bottom" id="llj-1e-dPm"/>
+                            <constraint firstItem="V4Q-xF-IF6" firstAttribute="top" secondItem="ZXG-d0-GQw" secondAttribute="bottom" id="otN-vE-GI7"/>
+                            <constraint firstItem="mBm-wq-RmY" firstAttribute="leading" secondItem="7Ul-kw-KU2" secondAttribute="leadingMargin" constant="-20" id="uC8-Gp-oOE"/>
+                            <constraint firstItem="ZXG-d0-GQw" firstAttribute="leading" secondItem="7Ul-kw-KU2" secondAttribute="leadingMargin" constant="-20" id="zs9-Xz-CHB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateTableView" destination="V4Q-xF-IF6" id="HGY-r8-qOa"/>
+                        <segue destination="8bx-Ih-mcm" kind="popoverPresentation" identifier="showView" popoverAnchorView="m8d-iE-m3b" id="lU6-FR-tUu">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsg-4r-KPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="1095"/>
+        </scene>
+        <!--Add Date Pop View Controller-->
+        <scene sceneID="Iwo-hR-VrZ">
+            <objects>
+                <viewController id="8bx-Ih-mcm" customClass="AddDatePopViewController" customModule="practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Py0-kJ-6tt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mru-YH-cRI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ePn-ty-5Nz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuo-qm-cWg">
+                                <rect key="frame" x="520" y="540" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Aik-Xg-5Ng"/>
+                                    <constraint firstAttribute="width" constant="60" id="V7g-UQ-TRG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="r1W-tC-o4D"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="xs7-s8-NXc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="＋">
+                                    <color key="titleColor" red="0.25005361440000001" green="0.30566063519999997" blue="0.58369332549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="save:" destination="8bx-Ih-mcm" eventType="touchUpInside" id="edu-mV-PNU"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="mg5-3k-xVd">
+                                <rect key="frame" x="0.0" y="20" width="600" height="520"/>
+                                <date key="date" timeIntervalSinceReferenceDate="475999987.311867">
+                                    <!--2016-02-01 06:13:07 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="changeDate:" destination="8bx-Ih-mcm" eventType="valueChanged" id="JGd-EX-Pih"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cuo-qm-cWg" secondAttribute="trailing" id="Jso-xo-DsC"/>
+                            <constraint firstItem="cuo-qm-cWg" firstAttribute="top" secondItem="mg5-3k-xVd" secondAttribute="bottom" id="Pof-5Y-CiQ"/>
+                            <constraint firstAttribute="trailing" secondItem="mg5-3k-xVd" secondAttribute="trailing" id="Ps9-Al-7ew"/>
+                            <constraint firstItem="Mru-YH-cRI" firstAttribute="top" secondItem="cuo-qm-cWg" secondAttribute="bottom" id="WFV-qa-wsK"/>
+                            <constraint firstItem="mg5-3k-xVd" firstAttribute="leading" secondItem="ePn-ty-5Nz" secondAttribute="leading" id="ZtR-aQ-bia"/>
+                            <constraint firstItem="mg5-3k-xVd" firstAttribute="top" secondItem="Py0-kJ-6tt" secondAttribute="bottom" id="quS-Fp-rxp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="mg5-3k-xVd" id="HqG-JE-Oju"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eit-OZ-DYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2346" y="1097"/>
         </scene>
         <!--Add Place Pop View Controller-->
         <scene sceneID="CUv-KS-Beb">
@@ -837,7 +1014,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhw-2U-bUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="1836"/>
+            <point key="canvasLocation" x="992" y="1880"/>
         </scene>
     </scenes>
     <resources>

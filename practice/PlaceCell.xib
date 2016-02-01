@@ -53,7 +53,7 @@
             <connections>
                 <outlet property="titleLabel" destination="Sja-Ct-F9G" id="CSW-ad-2aa"/>
             </connections>
-            <point key="canvasLocation" x="275" y="377"/>
+            <point key="canvasLocation" x="304" y="401"/>
         </tableViewCell>
     </objects>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDelegate,UITableViewDataSource {
+class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDelegate {
     
     
     
@@ -19,12 +19,16 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
+        self.placeTableView.reloadData()
+        
+        let nib:UINib = UINib(nibName: "PlaceCell", bundle: nil)
+        self.placeTableView.registerNib(nib, forCellReuseIdentifier: "PlaceCell")
+        
         if NSUserDefaults.standardUserDefaults().objectForKey("title") != nil {
             titleList =
                 NSUserDefaults.standardUserDefaults().objectForKey("title") as! [String]
         }
-        let nib:UINib = UINib(nibName: "PlaceCell", bundle: nil)
-        self.placeTableView.registerNib(nib, forCellReuseIdentifier: "PlaceCell")
+        
         
     
         
@@ -67,7 +71,7 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
     
     
     override func viewDidAppear(animated: Bool) {
-        placeTableView.reloadData()
+        self.placeTableView.reloadData()
     }
     
     

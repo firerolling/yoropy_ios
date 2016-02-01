@@ -99,7 +99,7 @@ class AddPlacePopViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func openGuruNavi(sender: UIButton) {
         let svc = SFSafariViewController(URL: NSURL(string: self.urlGurunavi)!)
-        self.presentViewController(svc, animated: true, completion: nil)
+        
     }
     
     
