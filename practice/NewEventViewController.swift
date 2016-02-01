@@ -19,19 +19,21 @@ class NewEventViewController: UIViewController, LiquidFloatingActionButtonDataSo
     @IBOutlet weak var imageView: UIImageView!
     
     var placeName :String! //ポップアップのplacetitleをこっちのコントローラに受けるための変数定義
+    //var dateArray :[String]!
     //@IBOutlet weak var placetitle: UILabel!
     
     @IBOutlet weak var test: UILabel!
     
+    
     //追加のメンバ変数
-    var eventTitle :String = ""
+   // var eventTitle :String = ""
     var eventPhoto :UIImage! = nil
     var eventPlace :String = ""
     var eventDate  :String = ""
     
     //保存用メンバ変数
     
-    var saveEventTitle :String!
+    //var saveEventTitle :String!
     var saveEventPhoto :UIImage? = nil
     var uploadEventPhoto :PFFile!
     var saveEventPlace :String!
@@ -44,13 +46,14 @@ class NewEventViewController: UIViewController, LiquidFloatingActionButtonDataSo
     @IBOutlet weak var closeButton: UIButton!
     
     override func viewDidLoad() {
-         
+//        print(dateArray)
+//         test.text = dateArray[0]
 //        titleField.delegate = self
         
-//        //placeTitleがアラートで表示されるかテスト
-//        let alert = UIAlertController(title: "Alert", message: placeTitle, preferredStyle: UIAlertControllerStyle.Alert)
-//        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-//        self.presentViewController(alert, animated: true, completion: nil)
+//        for object in dateArray {
+//            let label = object
+//            print("ラベル:\(label)")
+//        }
         
         self.view.bringSubviewToFront(imageView)
         
@@ -173,7 +176,7 @@ class NewEventViewController: UIViewController, LiquidFloatingActionButtonDataSo
        // savingObjects["title"] = self.saveEventTitle
         savingObjects["photo"] = self.uploadEventPhoto
         savingObjects["user"] = PFUser.currentUser()!.username
-     //   savingObjects["date"] = self.saveEventDate
+        //savingObjects["date"] = self.saveEventDate
         
         savingObjects.saveInBackgroundWithBlock{ (success: Bool, error: NSError?) -> Void in
             

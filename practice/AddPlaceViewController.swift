@@ -13,7 +13,7 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
     
     
     
-    var savePlaceTitle :String!
+    //var savePlaceTitle :String!
     @IBOutlet weak var placeTableView: UITableView!
     
     override func viewDidLoad() {
@@ -28,7 +28,6 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
             titleList =
                 NSUserDefaults.standardUserDefaults().objectForKey("title") as! [String]
         }
-        
         
     
         
@@ -50,8 +49,6 @@ class AddPlaceViewController: UIViewController, UIPopoverPresentationControllerD
         return titleList.count
 
     }
-    
-    
     
     
     

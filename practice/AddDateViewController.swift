@@ -10,9 +10,6 @@ import UIKit
 
 class AddDateViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDelegate {
     
-    
-    
-    
     @IBOutlet weak var dateTableView: UITableView!
     
     override func viewDidLoad() {
@@ -37,8 +34,6 @@ class AddDateViewController: UIViewController, UIPopoverPresentationControllerDe
         return dateList.count
         
     }
-    
-    
     
     
     
@@ -75,6 +70,10 @@ class AddDateViewController: UIViewController, UIPopoverPresentationControllerDe
         
         
     }
+    @IBAction func backToList(sender: AnyObject) {
+        self.performSegueWithIdentifier("datetodetail", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showView"
         {
